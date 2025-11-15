@@ -1,0 +1,19 @@
+div.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+div.flex-container > div {
+  margin: 10px;
+}
+
+.center-header{
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    font-weight: 200;
+    color: #ffffff;
+    font-size: calc(4vw + 10px);
+    
+}
