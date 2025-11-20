@@ -149,3 +149,23 @@ body.nav-active .nav__list-item:nth-child(4) {
 body.nav-active .nav__list-item:nth-child(5) {
   transition-delay: 1s;
 }
+
+
+
+
+#eye-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* click through eyes */
+}
+
+.eye {
+  position: absolute;
+  max-width: 30px;
+  max-height: 30px;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s;
+}

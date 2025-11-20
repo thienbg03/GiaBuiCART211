@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../GiaBuiCART211/final/homestyle.css">
-    <link rel="stylesheet" href="../GiaBuiCART211/final/blogstyle.css">
+    <link rel="stylesheet" href="final/homestyle.css">
+    <link rel="stylesheet" href="final/blogstyle.css">
     <title>Blog</title>
 </head>
 <body style="background-color: darkolivegreen;">
+    <div id="eye-container"></div>
 
     <!-- TOP NAV BAR -->
     <div class="menu-icon">
@@ -30,17 +31,71 @@
         <header>Blog</header>
     </div>
     <div class="flex-container">
-        <div>
-            
+        <div class="card">
+            <img src="images/spicyramen.jpg" alt="Avatar">
+            <div class="container">
+                <h4><b>Spicy Rament</b></h4> 
+                <p>A cozy bowl with rich broth and fresh toppings.</p> 
+            </div>
         </div>
-        <div>
-            <main>
-                <p>Ocean Vuong, born in 1988 in Ho Chi Minh City (Vietnam), is a Vietnamese American poet,
-                    Born in Saigon, Vietnam, he currently splits his time between Northampton, Massachusetts,
-                     and New York City.</p>
-            </main>
+
+        <div class="card">
+            <img src="images/avocadotoast.jpg" alt="Avocado Toast">
+            <div class="container">
+            <h4><b>Avocado Toast</b></h4> 
+            <p>Crispy toast topped with smashed avocado.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/fruitbowl.jpg" alt="Fruit Bowl">
+            <div class="container">
+            <h4><b>Fruit Bowl</b></h4>
+            <p>A colorful mix of seasonal fruits.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/pestopasta.jpg" alt="Veggie Pasta">
+            <div class="container">
+            <h4><b>Pesto Pasta</b></h4>
+            <p>Light pasta tossed with vegetables and herbs.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/chocopancake.jpg" alt="Berry Pancakes">
+            <div class="container">
+            <h4><b>Chocolate Chip Pancakes</b></h4>
+            <p>Stacked pancakes topped with an unhealthy amount of chocolate chips</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/sushi.jpg" alt="Sushi Platter">
+            <div class="container">
+            <h4><b>Sushi Platter</b></h4>
+            <p>A mix of fresh sushi favorites.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/bltsandwich.jpeg" alt="Grilled Sandwich">
+            <div class="container">
+            <h4><b>Bacon Lettuce Tomato Sandwich</b></h4>
+            <p>Golden, melty, and perfectly toasted breads sandwiching bacons, lettuce and tomatoes.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/chocake.jpg" alt="Chocolate Cake">
+            <div class="container">
+            <h4><b>Chocolate Cake</b></h4>
+            <p>Rich chocolate layers with smooth frosting.</p>
+            </div>
         </div>
     </div>
+
 
     <script>
             console.clear();
@@ -72,5 +127,37 @@
             })();
     </script>
 
+    <script>
+        const eyeContainer = document.getElementById('eye-container');
+
+        let mouseX = 0;
+        let mouseY = 0;
+
+        // Track cursor
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX + window.scrollX;
+            mouseY = e.clientY + window.scrollY;
+        });
+
+        // Spawn an eye near the cursor
+        function spawnEye() {
+            const eye = document.createElement('img');
+            eye.src = 'images/eye.jpg'; // your eye image
+            eye.classList.add('eye');
+
+            // Random offset around cursor, e.g., ±50px
+            const offsetX = Math.random() * 100 - 50;
+            const offsetY = Math.random() * 100 - 50;
+
+            eye.style.left = `${mouseX + offsetX}px`;
+            eye.style.top = `${mouseY + offsetY}px`;
+
+            eyeContainer.appendChild(eye);
+        }
+
+        // Spawn an eye every second
+        setInterval(spawnEye, 1000);
+
+    </script>
 </body>
 </html>
