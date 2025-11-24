@@ -26,10 +26,9 @@
         </div>
 
         <div class="site-content">
-            <h1 class="site-content__headline">Welcome to Surveillance House</h1>
-            
+            <h1 class="site-content__headline">Welcome to the Final Page</h1>
+            <p>You Have Been Watched By: <span id="watchedby"></span> eyes</p> 
         </div>
-
         <script>
             console.clear();
 
@@ -59,6 +58,11 @@
 
             init();
             })();
+        </script>
+
+        <script>
+            const randomCount = Math.floor(Math.random() * (9000 - 100 + 1)) + 100;
+            document.getElementById('watchedby').textContent += randomCount;
         </script>
 </body>
 </html>

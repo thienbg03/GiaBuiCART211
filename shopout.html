@@ -29,83 +29,89 @@
 <!-- Header -->
 <div class="center-header">
         <header>Check Out</header>
-    </div>
+</div>
+<div class="next-button">
+        <header><a href="shop.html">Return</a></header>
+</div>
 <!-- Contact Section -->
-    <div class="w3-container w3-padding-32" id="contact">
-        <div id="eye-container"></div>
-        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">FILL IT OUT</h3>
-        <form action="/action_page.php" target="_blank">
-        <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-        <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
-        <input class="w3-input w3-section w3-border" type="text" placeholder="Bank Account" required name="Subject">
-        <input class="w3-input w3-section w3-border" type="text" placeholder="Social Security Number" required name="Comment">
-        <button class="w3-button w3-black w3-section" type="button">
-            <i class="fa fa-paper-plane"></i> Order
-        </button>
-        </form>
-    </div>
+<div class="w3-container w3-padding-32" id="contact">
+    <div id="eye-container"></div>
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">FILL IT OUT</h3>
+    <form action="/action_page.php" target="_blank">
+    <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+    <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
+    <input class="w3-input w3-section w3-border" type="text" placeholder="Bank Account" required name="Subject">
+    <input class="w3-input w3-section w3-border" type="text" placeholder="Social Security Number" required name="Comment">
+    <button class="w3-button w3-black w3-section" type="button">
+        <i class="fa fa-paper-plane"></i> Order
+    </button>
+    </form>
+</div>
 <!-- Page content -->
-        <script>
-            console.clear();
+<footer style="text-align:center; padding:20px; background-color:#1e2023; color:white; margin-top:50px;">
+        &copy; 2025 Gia Bui. All rights reserved. Student Project.
+</footer>  
+<script>
+    console.clear();
 
-            const app = (() => {
-            let body;
-            let menu;
-            let menuItems;
+    const app = (() => {
+    let body;
+    let menu;
+    let menuItems;
 
-            const init = () => {
-                body = document.querySelector('body');
-                menu = document.querySelector('.menu-icon');
-                menuItems = document.querySelectorAll('.nav__list-item');
+    const init = () => {
+        body = document.querySelector('body');
+        menu = document.querySelector('.menu-icon');
+        menuItems = document.querySelectorAll('.nav__list-item');
 
-                applyListeners();
-            };
+        applyListeners();
+    };
 
-            const applyListeners = () => {
-                menu.addEventListener('click', () => toggleClass(body, 'nav-active'));
-            };
+    const applyListeners = () => {
+        menu.addEventListener('click', () => toggleClass(body, 'nav-active'));
+    };
 
-            const toggleClass = (element, stringClass) => {
-                if (element.classList.contains(stringClass))
-                element.classList.remove(stringClass);else
+    const toggleClass = (element, stringClass) => {
+        if (element.classList.contains(stringClass))
+        element.classList.remove(stringClass);else
 
-                element.classList.add(stringClass);
-            };
+        element.classList.add(stringClass);
+    };
 
-            init();
-            })();
-        </script>
-        <script>
-        const eyeContainer = document.getElementById('eye-container');
+    init();
+    })();
+</script>
+<script>
+const eyeContainer = document.getElementById('eye-container');
 
-        let mouseX = 0;
-        let mouseY = 0;
+let mouseX = 0;
+let mouseY = 0;
 
-        // Track cursor
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX + window.scrollX;
-            mouseY = e.clientY + window.scrollY;
-        });
+// Track cursor
+document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX + window.scrollX;
+    mouseY = e.clientY + window.scrollY;
+});
 
-        // Spawn an eye near the cursor
-        function spawnEye() {
-            const eye = document.createElement('img');
-            eye.src = 'images/eye.jpg'; // your eye image
-            eye.classList.add('eye');
+// Spawn an eye near the cursor
+function spawnEye() {
+    const eye = document.createElement('img');
+    eye.src = 'images/eye.jpg'; // your eye image
+    eye.classList.add('eye');
 
-            // Random offset around cursor, e.g., ±50px
-            const offsetX = Math.random() * 100 - 50;
-            const offsetY = Math.random() * 100 - 50;
+    // Random offset around cursor, e.g., ±50px
+    const offsetX = Math.random() * 100 - 50;
+    const offsetY = Math.random() * 100 - 50;
 
-            eye.style.left = `${mouseX + offsetX}px`;
-            eye.style.top = `${mouseY + offsetY}px`;
+    eye.style.left = `${mouseX + offsetX}px`;
+    eye.style.top = `${mouseY + offsetY}px`;
 
-            eyeContainer.appendChild(eye);
-        }
+    eyeContainer.appendChild(eye);
+}
 
-        // Spawn an eye every second
-        setInterval(spawnEye, 1000);
+// Spawn an eye every second
+setInterval(spawnEye, 1000);
 
-    </script>
+</script>
 </body>
 </html>
