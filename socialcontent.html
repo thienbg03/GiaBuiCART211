@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="final/homestyle.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="final/shopstyle.css">
+    <title>Social</title>
+    <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    .w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+    .w3-third img:hover{opacity: 1}
+    </style>
+</head>
+<body style="background-color: skyblue;">
+        <div class="menu-icon">
+            <span class="menu-icon__line menu-icon__line-left"></span>
+            <span class="menu-icon__line"></span>
+            <span class="menu-icon__line menu-icon__line-right"></span>
+        </div>
+        <div class="nav">
+            <div class="nav__content">
+                <ul class="nav__list">
+                    <li class="nav__list-item"><a href="homepage.html">Home</a></li>
+                    <li class="nav__list-item"><a href="blog.html">Blog</a></li>
+                    <li class="nav__list-item"><a href="shop.html">Shop</a></li>
+                    <li class="nav__list-item"><a href="social.html">Social</a></li>
+                    <li class="nav__list-item"><a href="final.html">Final</a></li>
+                </ul>
+            </div>
+        </div>
+        
+<!-- Header -->
+<div class="center-header">
+    <header>Social Content</header>
+</div>
+ <div id="eye-container"></div>
+ 
+<!-- Page Container -->
+<div class="w3-main" style="margin-left: 100px; margin-right: 100px;">
+
+  <!-- Push down content on small screens --> 
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Photo grid -->
+  <div class="w3-row">
+    <div class="w3-third">
+      <img src="images/handpoint.jpg" style="width:100%" onclick="onClick(this)" alt="You are being watched">
+      <img src="images/anonymous.jpg" style="width:100%" onclick="onClick(this)" alt="Anonymity is no longer security">
+      <img src="images/browsing.jpg" style="width:100%" onclick="onClick(this)" 
+           alt="Your calm browsing is analyzed, categorized, and stored">
+    </div>
+
+    <div class="w3-third">
+      <img src="images/profile.jpg" style="width:100%" onclick="onClick(this)"  alt="Your location, interests, and habits quietly shape your online profile">
+      <img src="images/alone.jpg" style="width:100%" onclick="onClick(this)"  alt="Even when you think you're alone, your digital footprint remains">
+      <img src="images/peace.jpeg" style="width:100%" onclick="onClick(this)" alt="Even your quiet moments online become part of your data history">
+    </div>
+    
+    <div class="w3-third">
+      <img src="images/riverdata.jpg" style="width:100%" onclick="onClick(this)" alt="Your browsing flows are tracked like a river of data">
+      <img src="images/onlineshop.jpg" style="width:100%" onclick="onClick(this)" alt="Your online journey is monitored—every stop, every pause">
+      <img src="images/doom.png" style="width:100%" onclick="onClick(this)"  alt="Your scroll patterns reveal more than the scenery ever will">
+      <img src="images/item3.jpg" style="width:100%" onclick="onClick(this)"  alt="You are tracked, EVERYWHERE">
+    </div>
+  </div>
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- About section -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+    <h4><b>About Social Media</b></h4>
+    <img src="images/socialmedia.png" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
+    <div class="w3-content w3-justify" style="max-width:600px">
+      <h4>You Are</h4>
+      <p>The Customer, The Buyer and The Product</p>
+      <hr class="w3-opacity">
+      <h4 class="w3-padding-16">Your Data</h4>
+      <p class="w3-wide">Public</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:20%">20%</div>
+      </div>
+      <p class="w3-wide">Private</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:80%">80%</div>
+      </div>
+      <p class="w3-wide">Obtained</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:60%">60%</div>
+      </div>
+      <hr class="w3-opacity">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal02" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <p>Thank you for providing the information</p>
+    </div>
+  </div>
+
+  <!-- Contact section -->
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+    <div class="w3-content" style="max-width:600px">
+      <h4 class="w3-center"><b>Spread the news to save everyone everyone</b></h4>
+        <form action="/action_page.php" target="_blank">
+        <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
+        <input class="w3-input w3-section w3-border" type="text" placeholder="Message" required name="Comment">
+        <button class="w3-button w3-black w3-section" type="button" onclick="openModal()">
+            <i class="fa fa-paper-plane"></i> Send
+        </button>
+        </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey">  
+    <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+  </footer>
+  
+  
+
+<!-- End page content -->
+</div> 
+    <!-- Nav Script -->
+    <script>
+        console.clear();
+        const app = (() => {
+        let body;
+        let menu;
+        let menuItems;
+
+        const init = () => {
+            body = document.querySelector('body');
+            menu = document.querySelector('.menu-icon');
+            menuItems = document.querySelectorAll('.nav__list-item');
+
+            applyListeners();
+        };
+
+        const applyListeners = () => {
+            menu.addEventListener('click', () => toggleClass(body, 'nav-active'));
+        };
+
+        const toggleClass = (element, stringClass) => {
+            if (element.classList.contains(stringClass))
+            element.classList.remove(stringClass);else
+
+            element.classList.add(stringClass);
+        };
+
+        init();
+        })();
+    </script>
+    <!-- Eye Spawner Script -->
+    <script>
+        const eyeContainer = document.getElementById('eye-container');
+
+        let mouseX = 0;
+        let mouseY = 0;
+
+        // Track cursor
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX + window.scrollX;
+            mouseY = e.clientY + window.scrollY;
+        });
+
+        // Spawn an eye near the cursor
+        function spawnEye() {
+            const eye = document.createElement('img');
+            eye.src = 'images/eye.jpg'; // your eye image
+            eye.classList.add('eye');
+
+            // Random offset around cursor, e.g., ±50px
+            const offsetX = Math.random() * 100 - 50;
+            const offsetY = Math.random() * 100 - 50;
+
+            eye.style.left = `${mouseX + offsetX}px`;
+            eye.style.top = `${mouseY + offsetY}px`;
+
+            eyeContainer.appendChild(eye);
+        }
+
+        // Spawn an eye every second
+        setInterval(spawnEye, 1000);
+
+    </script>
+    <script>
+      function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+
+      function openModal(){
+        document.getElementById("modal02").style.display = "block";
+      }
+    </script>
+</body>
+</html>

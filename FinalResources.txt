@@ -1,1 +1,4 @@
 navbar and menu : https://codepen.io/RSH87/pen/rmgYbo
+
+https://www.w3schools.com/w3css/w3css_templates.asp css 
+https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_social&stacked=h social 

@@ -5,6 +5,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.next-button{
+  height: 20px;
+  width: 75px;
+  position: fixed;
+  right: 50px;
+  top: 30px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5%;
+}
+
 .site-content {
   max-width: 1100px;
   height: 100vh;
