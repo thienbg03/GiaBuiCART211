@@ -31,7 +31,9 @@
         <header>Movie Blog</header>
     </div>
     <div class="next-button">
-        <a href="blog.html"><header>Previous Blog</header></a>
+        <a href="bloggame.html"><header>Next Blog</header></a>
+          <br>
+        <a href="blog.html"><header>Previous Blog</header></a>  
     </div>
     <div class="flex-container">
         <div class="card">
@@ -115,9 +117,9 @@
         </div>
 
     </div>
-<footer style="text-align:center; padding:20px; background-color:#1e2023; color:white; margin-top:50px;">
-        &copy; 2025 Gia Bui. All rights reserved. Student Project.
-</footer> 
+<footer>
+    &copy; 2025 Gia Bui. All rights reserved. Student Project.
+</footer>
 
 <script>
         console.clear();
@@ -173,7 +175,7 @@
 
         eye.style.left = `${mouseX + offsetX}px`;
         eye.style.top = `${mouseY + offsetY}px`;
-
+        eye.style.pointerEvents = 'none';
         eyeContainer.appendChild(eye);
     }
 
