@@ -9,7 +9,7 @@
 </head>
 <body style="background-color: darkolivegreen;">
     <div id="eye-container"></div>
-
+    <div id="textcontainer"></div>
     <!-- TOP NAV BAR -->
     <div class="menu-icon">
             <span class="menu-icon__line menu-icon__line-left"></span>
@@ -179,7 +179,27 @@
 
     // Spawn an eye every second
     setInterval(spawnEye, 1000);
+    
+    const textContainer = document.getElementById('textcontainer');
+    let textlist = ['I am watching you', 'you like that content huh', 'look behind you', "someone is following your cursor", 'you are not alone', 
+    'we saw that', 'we know what you are doing', 'This webpage remembers you.'];
+    function spawnText(){
+        const text = document.createElement('p');
+        const random = Math.floor(Math.random() * textlist.length);
+        text.innerHTML = textlist[random];
 
+        const offsetX = Math.random() * 100 - 50;
+        const offsetY = Math.random() * 100 - 50;
+
+        text.style.left = `${mouseX + offsetX}px`;
+        text.style.top = `${mouseY + offsetY}px`;
+        text.style.position = 'absolute';
+        text.style.pointerEvents = 'none';
+
+        textContainer.appendChild(text);
+    }
+
+    setInterval(spawnText, 3500);
 </script>
 </body>
 </html>
