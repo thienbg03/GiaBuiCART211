@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ass5.css">
+    <title>Assignment 5</title>
+</head>
+<body>
+    <nav>
+        <ul class="normalMenu">
+            
+            <li><a href="#news">Series</a></li>
+            <li><a href="#contact">About</a></li>
+            <li><a href="stories.html" class="active" style="font-weight: bolder;">Stories</a></li>
+            <li style="float: left;"><img src="assets/logo.png"></li>
+        </ul>
+
+        <div class="menu-icon" id="menuToggle">&#9776;</div>
+        <div class="menu1" id="fullMenu">
+            <button id="closeButton" class="close-menu">×</button>
+
+            <ul class="menu-links">
+                
+                <li><a href="#news">Series</a></li>
+                <li><a href="#contact">About</a></li>
+                <li><a href="stories.html" class="active" style="font-weight: bolder;">Stories</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <header>
+        <h1>Humans of New York</h1>
+    </header>
+
+    <main class="mainContent">
+        <p style="font-weight: bold;">Humans of New York began as Brandon Stanton photography project in 2010.  
+            The initial goal was to photograph 10,000 New Yorkers on the street, and create an exhaustive catalogue of the city’s inhabitants. <br><br>
+            Taken together,  these portraits and captions became the subject of a vibrant blog. HONY now has over twenty million followers on social media, 
+            and provides a worldwide audience with daily glimpses into the lives of strangers on the streets of New York City. </p>
+        <section>
+            <article>
+                 <div class="books">
+                    <figure class="im1">
+                        <a href="story1.html">
+                        <div class="container">
+                            <img src="assets/america_pageant.jpg" class="im">
+                            <div class="overlay">
+                                <div class="text">Click Me</div>
+                            </div>
+                        </div>
+                        </a>
+                    </figure>
+
+                    <figure class="im2">
+                        <img src="assets/Chipwich_guy.jpg" class="im">
+                    </figure>
+
+                    <figure class="im3">
+                        <img src="assets/end_of_life_patient.jpg" class="im">
+                     </figure>
+
+                    <figure class="im4">
+                        <img src="assets/fake_sport.jpg" class="im">
+                    </figure>
+
+                    <figure class="im5">
+                        <img src="assets/gettin_married.jpg" class="im">
+                    </figure>
+
+                    <figure class="im6">
+                        <img src="assets/homework.jpg" class="im">
+                    </figure>
+
+                    <figure class="im7">
+                        <img src="assets/invisibility.jpg" class="im">
+                    </figure>
+
+
+                    <figure class="im8">
+                        <img src="assets/exhausting_to_me.jpg" class="im">
+                     </figure>
+
+                    <figure class="im9">
+                        <img src="assets/Mardi-Gras.jpg" class="im">
+                    </figure>
+
+                    <figure class="im10">
+                        <img src="assets/Right_and_wrong.jpg" class="im">
+                    </figure>
+
+                    <figure class="im11">
+                        <img src="assets/sketchbook.jpg" class="im">
+                    </figure>
+
+                    <figure class="im12">
+                        <img src="assets/tough_morning.jpg" class="im">
+                    </figure>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        © Gia Bui, CART 211, Fall 2025, Assessment 5 — Credits: humansofnyarchive.com
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerButton = document.getElementById("menuToggle");
+            const closeButton = document.getElementById('closeButton');
+            const menu1 = document.querySelector('.menu1');
+
+            // Gestion de l'ouverture du menu
+            hamburgerButton.addEventListener('click', () => {
+                menu1.classList.add('menu-deployed');
+            });
+
+            // Gestion de la fermeture du menu
+            closeButton.addEventListener('click', () => {
+                menu1.classList.remove('menu-deployed');
+            });
+        });
+    </script>
+</body>
+</html>
